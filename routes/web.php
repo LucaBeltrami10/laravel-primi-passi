@@ -13,11 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/home', function () {
+Route::get('/', function () {
 
     $titolo = 'Laravel Prima Pagina';
 
@@ -25,6 +22,20 @@ Route::get('/home', function () {
 
         'titolo' => $titolo,
         'user' => 'Marietto'
+
+    ]);
+});
+
+Route::get('user', function () {
+
+    $user = 'Marietto';
+    $age = 65;
+
+    return view('user', [
+
+        'titolo' => 'Sezione riservata',
+        'user' => $user,
+        'age' => $age,
 
     ]);
 });
