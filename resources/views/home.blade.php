@@ -9,7 +9,9 @@
 
 <body>
     <main>
-        <h1>laravel-primi-passi</h1>
+        <h1>{{$titolo}}</h1>
+
+        <h3> Benvenuto : {{$user}}</h3>
     </main>
 
 

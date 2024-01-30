@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', function () {
+
+    $titolo = 'Laravel Prima Pagina';
+
+    return view('home', [
+
+        'titolo' => $titolo,
+        'user' => 'Marietto'
+
+    ]);
+});
